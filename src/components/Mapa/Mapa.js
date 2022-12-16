@@ -5,7 +5,9 @@ import TextField from '@mui/material/TextField';
 import axios from 'axios';
 
 const Mapa = () => {
+    // eslint-disable-next-line no-unused-vars
     const[paradas, setParadas] = useState([]);
+    // eslint-disable-next-line no-unused-vars
     const[busqueda, setBusqueda] = useState("");
 
     const getParadas = (search) =>{
