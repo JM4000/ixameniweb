@@ -7,7 +7,7 @@ import { useNavigate } from 'react-router-dom';
 const LogButton = ({ logIn }) => {
   const navigate = useNavigate();
   const verify = (token) => {
-    axios.get("https://pcu3s1.deta.dev//usuarios/logIn/" + token.credential).then((response) => {
+    axios.get("https://pcu3s1.deta.dev/usuarios/logIn/" + token.credential).then((response) => {
       logIn(token);
       navigate("/mapa")
     });
