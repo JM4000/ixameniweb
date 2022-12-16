@@ -1,24 +1,23 @@
-import logo from './logo.svg';
 import './App.css';
+import React, { useState } from 'react';
+import { GoogleOAuthProvider } from '@react-oauth/google';
+import { BrowserRouter, Routes, Route } from 'react-router-dom';
+import LogButton from './components/login/LogButton';
+import Mapa from './components/Mapa/Mapa';
 
 function App() {
+  const [token, setToken] = useState({});
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
+    <GoogleOAuthProvider clientId="456725843233-pggvbr8i3d8upmbatcgb1qlbt4545l04.apps.googleusercontent.com">
+    <BrowserRouter>
+   
+      <Routes>
+        <Route path="" element={<LogButton logIn={setToken} />} />
+        <Route path="mapa" element={<Mapa/>} />
+      </Routes>
+    </BrowserRouter>
+    
+  </GoogleOAuthProvider>
   );
 }
 
