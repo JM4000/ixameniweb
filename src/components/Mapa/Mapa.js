@@ -18,7 +18,7 @@ const Mapa = () => {
 
     return (
         <Container maxWidth="xl" sx={{ mb: 3 }}>
-            <Button variant="contained" color="secondary" sx={{"mt":"10px"}} onClick={() => {window.open("http://localhost:8000/logs")}}> Mostrar Logs</Button>
+            <Button variant="contained" color="secondary" sx={{"mt":"10px"}} onClick={() => {window.open("https://pcu3s1.deta.dev/logs")}}> Mostrar Logs</Button>
             <Box sx={{ m: "20px", border: 3, borderColor: "#BF40BF" }}>
                 <MapContainer style={{ width: "100%", height: "55vh" }} center={[36.72184282369917, -4.418403224132213]} zoom={13} scrollWheelZoom={false}>
                     <TileLayer
