@@ -9,7 +9,7 @@ const Mapa = () => {
     const[busqueda, setBusqueda] = useState("");
 
     const getParadas = (search) =>{
-        axios.get("http://localhost:8000/paradas/"+search).then((response) =>{
+        axios.get("https://pcu3s1.deta.dev/paradas/"+search).then((response) =>{
             console.log(response.data);
         })
     };
