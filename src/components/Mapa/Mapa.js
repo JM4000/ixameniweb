@@ -1,12 +1,15 @@
 import React, { useState } from 'react'
 import { Container, Box, Button } from '@mui/material'
-import { MapContainer, TileLayer, Marker, Popup } from 'react-leaflet';
+import { MapContainer, TileLayer } from 'react-leaflet';
 import TextField from '@mui/material/TextField';
 import axios from 'axios';
 
 const Mapa = () => {
     const[paradas, setParadas] = useState([]);
     const[busqueda, setBusqueda] = useState("");
+
+    console.log(paradas)
+    setParadas([]);
 
     const getParadas = (search) =>{
         axios.get("https://pcu3s1.deta.dev/paradas/"+search).then((response) =>{
